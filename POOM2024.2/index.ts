@@ -37,6 +37,18 @@ function acelerar(veiculo: Veiculo): void{
     console.log(veiculo.velocidade);
 }}
 
+function frear(veiculo: Veiculo): void {
+    if (veiculo.velocidade > 0) {
+        veiculo.velocidade -= veiculo.potencia * 0.1;
+        if (veiculo.velocidade < 0) {
+            veiculo.velocidade = 0;
+        }
+        console.log(`Velocidade reduzida para: ${veiculo.velocidade.toFixed(2)} km/h`);
+    } else {
+        console.log("O veículo já está parado.");
+    }
+}
+
 function criaVeiculo(): Veiculo{
     const veiculo: Veiculo = new Veiculo();
     veiculo.marca = teclado('Marca: ');
