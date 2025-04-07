@@ -23,6 +23,9 @@ while(true){
         case 1:
             acelerar(carro);
             break;
+        case 2:
+            frear(carro);
+            break;
     
         default:
             break;
